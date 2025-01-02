@@ -1,6 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:voltage/real_time_voltage_app.dart';
+import 'package:voltage/home_page.dart';
+import 'package:voltage/splash_screen.dart';  // Updated import
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: RealTimeVoltageApp(camera: camera),
+      home: SplashScreen(),  // HomeScreen as the initial screen
+      debugShowCheckedModeBanner: false,
     );
   }
 }
